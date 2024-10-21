@@ -36,6 +36,13 @@ struct ContentView: View {
                     }
                 }
             Spacer()
+            // weather is not nil
+            if let weather {
+                Text(MeasurementFormatter.temperature(value: weather.temp))
+                    .font(.system(size: 100))
+            }
+
+            Spacer()
         }
     }
 }
